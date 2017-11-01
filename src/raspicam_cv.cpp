@@ -44,7 +44,7 @@ namespace raspicam {
     RaspiCam_Cv::RaspiCam_Cv() {
         _impl=new _private::Private_Impl();
 	set(CV_CAP_PROP_FORMAT,CV_8UC3);
- 
+
     }
     RaspiCam_Cv::~RaspiCam_Cv() {
         delete _impl;
@@ -105,7 +105,7 @@ namespace raspicam {
         case CV_CAP_PROP_BRIGHTNESS :
             return _impl->getBrightness();
         case CV_CAP_PROP_CONTRAST :
-            return Scaler::scale ( -100,100,0,100,  _impl->getContrast() ); 
+            return Scaler::scale ( -100,100,0,100,  _impl->getContrast() );
         case CV_CAP_PROP_SATURATION :
             return  Scaler::scale ( -100,100,0,100, _impl->getSaturation() );;
 //     case CV_CAP_PROP_HUE : return _cam_impl->getSharpness();
@@ -130,7 +130,6 @@ namespace raspicam {
         case CV_CAP_PROP_MODE:
             _impl->setSensorMode(value);
             break;
-            
         case CV_CAP_PROP_FRAME_WIDTH :
             _impl->setWidth ( value );
             break;
@@ -153,7 +152,7 @@ namespace raspicam {
         case CV_CAP_PROP_BRIGHTNESS :
             _impl->setBrightness ( value );
             break;
-        case CV_CAP_PROP_CONTRAST : 
+        case CV_CAP_PROP_CONTRAST :
             _impl->setContrast ( Scaler::scale ( 0,100,-100,100, value ) );
             break;
         case CV_CAP_PROP_SATURATION :
@@ -164,7 +163,7 @@ namespace raspicam {
             _impl->setISO ( Scaler::scale ( 0,100,0,800, value ) );
             break;
         case CV_CAP_PROP_EXPOSURE :
-            if ( value>0 && value<=100 ) { 
+            if ( value>0 && value<=100 ) {
                 _impl->setShutterSpeed ( Scaler::scale ( 0,100,0,330000, value ) );
             } else {
                 _impl->setExposure ( RASPICAM_EXPOSURE_AUTO );
@@ -176,6 +175,10 @@ namespace raspicam {
             break;
         case CV_CAP_PROP_FPS:
             _impl->setFrameRate ( value );
+            break;
+        case CV_CAP_PROP_AWB:
+            _impl->setAWB ( value );
+            break;
         default :
             return false;
         };
@@ -187,5 +190,3 @@ namespace raspicam {
     }
 
 }
-
-
