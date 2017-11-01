@@ -176,9 +176,6 @@ namespace raspicam {
         case CV_CAP_PROP_FPS:
             _impl->setFrameRate ( value );
             break;
-        case CV_CAP_PROP_WHITE_BALANCE:
-            _impl->setAWB ( value );
-            break;
         default :
             return false;
         };

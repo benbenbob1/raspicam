@@ -101,7 +101,6 @@ namespace raspicam {
 	 * CV_CAP_PROP_EXPOSURE: -1 auto. [1,100] shutter speed from 0 to 33ms
      * CV_CAP_PROP_WHITE_BALANCE_RED_V : [1,100] -1 auto whitebalance
      * CV_CAP_PROP_WHITE_BALANCE_BLUE_U : [1,100] -1 auto whitebalance
-     * CV_CAP_PROP_WHITE_BALANCE : see RASPICAM_AWB for auto whitebalance modes
      * CV_CAP_PROP_MODE : [1,7] 0 auto mode
      *
          */

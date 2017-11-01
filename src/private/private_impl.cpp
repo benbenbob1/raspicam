@@ -81,7 +81,7 @@ namespace raspicam {
             State.captureFtm=RASPICAM_FORMAT_RGB;
             State.rpc_exposureMode = RASPICAM_EXPOSURE_AUTO;
             State.rpc_exposureMeterMode = RASPICAM_METERING_AVERAGE;
-            State.rpc_awbMode = RASPICAM_AWB_AUTO;
+            State.rpc_awbMode = RASPICAM_AWB_OFF;
             State.rpc_imageEffect = RASPICAM_IMAGE_EFFECT_NONE;
             State.colourEffects.enable = 0;
             State.colourEffects.u = 128;
