@@ -88,9 +88,9 @@ namespace raspicam {
 
         double get ( int propId );
 
-        /**Sets a property in the VideoCapture. 
-	 * 
-	 * 
+        /**Sets a property in the VideoCapture.
+	 *
+	 *
 	 * Implemented properties:
 	 * CV_CAP_PROP_FRAME_WIDTH,CV_CAP_PROP_FRAME_HEIGHT,
 	 * CV_CAP_PROP_FORMAT: CV_8UC1 or CV_8UC3
@@ -101,6 +101,7 @@ namespace raspicam {
 	 * CV_CAP_PROP_EXPOSURE: -1 auto. [1,100] shutter speed from 0 to 33ms
      * CV_CAP_PROP_WHITE_BALANCE_RED_V : [1,100] -1 auto whitebalance
      * CV_CAP_PROP_WHITE_BALANCE_BLUE_U : [1,100] -1 auto whitebalance
+     * CV_CAP_PROP_WHITE_BALANCE : see RASPICAM_AWB for auto whitebalance modes
      * CV_CAP_PROP_MODE : [1,7] 0 auto mode
      *
          */
@@ -118,5 +119,3 @@ namespace raspicam {
 
 }
 #endif
-
-
